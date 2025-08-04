@@ -248,7 +248,7 @@ class CheckIn {
     this.growthTask = new GrowthTask(juejin);
     this.dipLuckyTask = new DipLuckyTask(juejin);
     this.lotteriesTask = new LotteriesTask(juejin);
-    this.bugfixTask = new BugfixTask(juejin);
+    // this.bugfixTask = new BugfixTask(juejin);
     this.sdkTask = new SdkTask(juejin);
     this.mockVisitTask = new MockVisitTask(juejin);
 
@@ -260,8 +260,8 @@ class CheckIn {
     await this.dipLuckyTask.run();
     console.log(`运行 ${this.lotteriesTask.taskName}`);
     await this.lotteriesTask.run(this.growthTask, this.dipLuckyTask);
-    console.log(`运行 ${this.bugfixTask.taskName}`);
-    await this.bugfixTask.run();
+    // console.log(`运行 ${this.bugfixTask.taskName}`);
+    // await this.bugfixTask.run();
     await juejin.logout();
     console.log("-------------------------");
 
