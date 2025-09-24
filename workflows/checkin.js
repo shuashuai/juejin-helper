@@ -74,32 +74,32 @@ class DipLuckyTask extends Task {
   }
 }
 
-class BugfixTask extends Task {
-  taskName = "Bugfix";
+// class BugfixTask extends Task {
+//   taskName = "Bugfix";
 
-  bugStatus = -1;
-  collectBugCount = 0;
-  userOwnBug = 0;
+//   bugStatus = -1;
+//   collectBugCount = 0;
+//   userOwnBug = 0;
 
-  async run() {
-    const bugfix = this.juejin.bugfix();
+//   async run() {
+//     const bugfix = this.juejin.bugfix();
 
-    const competition = await bugfix.getCompetition();
-    const bugfixInfo = await bugfix.getUser(competition);
-    this.userOwnBug = bugfixInfo.user_own_bug;
+//     const competition = await bugfix.getCompetition();
+//     const bugfixInfo = await bugfix.getUser(competition);
+//     this.userOwnBug = bugfixInfo.user_own_bug;
 
-    // 掘金Bugfix功能已停用。
-    // try {
-    //   const notCollectBugList = await bugfix.getNotCollectBugList();
-    //   await bugfix.collectBugBatch(notCollectBugList);
-    //   this.bugStatus = 1;
-    //   this.collectBugCount = notCollectBugList.length;
-    //   this.userOwnBug += this.collectBugCount;
-    // } catch (e) {
-    //   this.bugStatus = 2;
-    // }
-  }
-}
+//     // 掘金Bugfix功能已停用。
+//     // try {
+//     //   const notCollectBugList = await bugfix.getNotCollectBugList();
+//     //   await bugfix.collectBugBatch(notCollectBugList);
+//     //   this.bugStatus = 1;
+//     //   this.collectBugCount = notCollectBugList.length;
+//     //   this.userOwnBug += this.collectBugCount;
+//     // } catch (e) {
+//     //   this.bugStatus = 2;
+//     // }
+//   }
+// }
 
 class LotteriesTask extends Task {
   taskName = "抽奖";
